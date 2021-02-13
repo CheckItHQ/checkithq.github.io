@@ -1,0 +1,310 @@
+/* generic */
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	color: #444;
+	overflow-y: scroll;
+}
+body.public {
+	font-size: 20px;
+}
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+	font-family: "Signika", sans-serif;
+	font-weight: bold;
+	color: #222;
+}
+
+a:not(.btn) {
+	text-decoration: underline;
+}
+a.btn .fa {
+	padding-right: 0.5em;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+li {
+	list-style-type: none;
+}
+
+/* sections */
+
+section {
+	padding: 3em;
+	background-color: white;
+}
+section.highlighted {
+	background-color: #02AAB3;
+}
+section.highlighted h2,
+section.highlighted h3,
+section.highlighted p,
+section.highlighted strong,
+section.highlighted em,
+section.highlighted small,
+section.highlighted span,
+section.highlighted li,
+section.highlighted label {
+	color: white;
+}
+section.highlighted a {
+	color: #DDD;
+}
+section.highlighted a:hover {
+	color: white;
+}
+section p {
+	margin: 1em 0;
+}
+
+section.section-collapse-first {
+	padding-bottom: 0;
+}
+section.section-collapse-last {
+	padding-top: 0;
+}
+
+@media (min-width: 992px) {
+	.centered-responsive {
+		text-align: center;
+	}
+	.centered-responsive-offset-2 {
+		margin-left: 8.33%;
+		text-align: center;
+	}
+}
+
+/* header */
+
+#header:not(.home) {
+	padding-top: 0;
+	padding-bottom: 1.5em;
+}
+#header h1 {
+	font-size: 60px;
+	color: #444;
+}
+#header h1 .fa {
+	padding-right: 10px;
+	font-size: 0.8em;
+	color: #444;
+}
+#header p {
+	margin-top: 0;
+	text-align: center;
+	font-size: large;
+	font-variant: small-caps;
+}
+
+#top-navigation {
+	border: none;
+	background-color: inherit;
+}
+#top-navigation a {
+	text-decoration: none;
+}
+#top-navigation.navigation-public a:hover {
+	text-decoration: underline;
+}
+#top-navigation .navbar-brand {
+	line-height: inherit;
+}
+#top-navigation .navbar-nav li {
+	padding: 10px;
+}
+#top-navigation .navbar-nav li > a {
+	padding: 5px;
+}
+#top-navigation .navbar-nav li.active > a {
+	border-bottom: 1px solid #DDD;
+	background-color: inherit;
+}
+
+/* signature (public footer) */
+
+#signature {
+	padding-bottom: 1em;
+}
+#signature h2 {
+	color: #444;
+}
+#signature h2 .fa {
+	font-size: smaller;
+	color: #444;
+}
+#signature p {
+	margin-top: 1.5em;
+	text-align: center;
+	font-size: small;
+}
+
+/* footer */
+
+#footer {
+	padding-top: 20px;
+	
+	/* undo bootstrap default nav */
+	margin-bottom: 0;
+	border: none;
+	background-color: inherit;
+}
+
+/* use the same looks for li anchors and list paragraphs */
+#footer li { font-size: small; }
+#footer a { line-height: inherit; }
+
+#footer a {
+	color: #777;
+	text-decoration: none;
+}
+#footer a:hover,
+#footer a:active {
+	color: #444;
+}
+
+#footer .signature {
+	font-weight: bold;
+}
+
+/* magic for a sticky footer */
+/* @see http://getbootstrap.com/2.3.2/examples/sticky-footer-navbar.html */
+html, body {
+	height: 100%;
+}
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -70px;
+}
+#push, #footer {
+	height: 70px;
+}
+@media (max-width: 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* forms */
+
+form.inline {
+	display: inline-block;
+}
+@media (min-width: 992px) {
+	form.inline-responsive {
+		display: inline-block;
+	}
+}
+
+label,
+input,
+small {
+	display: block;
+}
+label {
+	margin-top: 1em;
+	font-size: 16px;
+}
+input {
+	padding: 6px;
+	color: #444;
+	border: 1px solid #999;
+	border-radius: 6px;
+}
+@media (min-width: 992px) {
+	.centered-responsive input {
+		margin: 0 auto;
+	}
+}
+input[type="submit"] {
+	margin-top: 1em;
+}
+form.inline input,
+input.inline {
+	display: inline-block;
+	margin-top: 0;
+	margin-left: 1em;
+}
+input.inline {
+	float: left;
+}
+form.inline input.btn-lg,
+input.inline.btn-lg {
+	padding-top: 9px;
+	padding-bottom: 8px;
+}
+
+@media (min-width: 992px) {
+	form.inline-responsive input,
+	input.inline-responsive {
+		display: inline-block;
+		margin-top: 0;
+		margin-left: 1em;
+	}
+	input.inline-responsive {
+		float: left;
+	}
+	form.inline-responsive input.btn-lg,
+	input.inline-responsive.btn-lg {
+		padding-top: 9px;
+		padding-bottom: 8px;
+	}
+}
+
+form #message.error {
+	color: #F0AD4E;
+}
+
+/* avatars */
+
+.avatar {
+	margin-right: 0.25em;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.avatar.small {
+	width: 20px;
+	height: 20px;
+}
+
+/* text */
+
+.cap-line {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* lists */
+
+.boxes li {
+	margin-bottom: 1em;
+	padding: 0.67em;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+}
+.boxes h4 {
+	margin: 0;
+	line-height: 1.15;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.boxes form.inline {
+	float: right;
+}
+.boxes form.inline input {
+	margin-left: 0.33em;
+}
+.boxes li span {
+	font-size: small;
+}
